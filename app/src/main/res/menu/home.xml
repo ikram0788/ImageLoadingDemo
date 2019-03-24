@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_search"
+        android:title="Search something"
+        app:showAsAction="always"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        />
+    <item
+        android:id="@+id/action_span1"
+        android:icon="@android:drawable/ic_dialog_alert"
+        android:title="Span1"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/action_span2"
+        android:icon="@android:drawable/ic_dialog_alert"
+        android:title="Span2"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/action_span3"
+        android:icon="@android:drawable/ic_dialog_alert"
+        android:title="Span3"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/action_span4"
+        android:icon="@android:drawable/ic_dialog_alert"
+        android:title="Span4"
+        app:showAsAction="withText"/>
+</menu>

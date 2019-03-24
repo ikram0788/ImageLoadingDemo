@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activities.HomeActivity">
+
+
+    <data>
+
+        <import type="imagecaching.ikram.com.imageloadingdemo.R" />
+
+        <variable
+            name="imageUrl"
+            type="String" />
+
+        <variable
+            name="viewModel"
+            type="imagecaching.ikram.com.imageloadingdemo.viewmodels.DetailFragViewModel" />
+
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundGravity="center">
+
+        <ImageView
+            android:id="@+id/iv_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:imageType="@{1}"
+            app:imageUrl="@{viewModel.photoLiveData.getValue().toString()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeHolder="@{R.mipmap.ic_launcher_round}" />
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

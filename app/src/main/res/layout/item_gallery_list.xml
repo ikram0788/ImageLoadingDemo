@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="imagecaching.ikram.com.imageloadingdemo.R" />
+
+        <variable
+            name="entity"
+            type="imagecaching.ikram.com.imageloadingdemo.datamodels.Photo" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+        <variable
+            name="chieldClickHandler"
+            type="imagecaching.ikram.com.imageloadingdemo.adapters.RecyclerChieldClickHandler" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:onClick="@{(view)->chieldClickHandler.onClick(entity,view,position)}"
+            android:src="@mipmap/ic_launcher"
+            app:imageType="@{0}"
+            app:imageUrl="@{entity.toString()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeHolder="@{R.drawable.ic_close}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparent"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="8dp"
+            android:text="@{entity.title}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_gallery"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gallery"
+            app:layout_constraintStart_toStartOf="@+id/iv_gallery" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="imagecaching.ikram.com.imageloadingdemo.adapters.CategoryPagerAdapter" />
+
+        <variable
+            name="viewModel"
+            type="imagecaching.ikram.com.imageloadingdemo.viewmodels.HomeViewModel" />
+
+        <variable
+            name="clickHandler"
+            type="imagecaching.ikram.com.imageloadingdemo.adapters.ClickHandler" />
+
+        <variable
+            name="chieldClickHandler"
+            type="imagecaching.ikram.com.imageloadingdemo.adapters.RecyclerChieldClickHandler" />
+
+        <variable
+            name="itemBinder"
+            type="imagecaching.ikram.com.imageloadingdemo.binder.ItemBinder" />
+
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <include
+                android:id="@+id/include_toolbar"
+                layout="@layout/layout_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".ui.activities.HomeActivity">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_category_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="4dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:tag="CATEGORY"
+                app:behavior_overlapTop="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_gallery"
+                app:pagedChieldClickHandler="@{chieldClickHandler}"
+                app:pagedClickHandler="@{clickHandler}"
+                app:pagedItemViewBinder="@{itemBinder}"
+                app:pagedItems="@{viewModel.photoLiveData}" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>

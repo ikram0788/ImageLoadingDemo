@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#fa4a6f</color>
+    <color name="color_window_bg">#ffffff</color>
+    <color name="colorTextPrimary">#ffffff</color>
+    <color name="colorTextGray">#e5e5e5</color>
+    <color name="colorTextManatee">#999999</color>
+    <color name="colorTextDimGray">#666666</color>
+    <color name="colorTimberWolf">#d8d8d8</color>
+    <color name="colorTransparent">#60000000</color>
+</resources>

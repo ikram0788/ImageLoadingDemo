@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ImageLoadingDemo</string>
+    <string name="error_network">Network connectionn  error</string>
+</resources>
